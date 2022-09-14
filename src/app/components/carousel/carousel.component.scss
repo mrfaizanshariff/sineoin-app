@@ -1,0 +1,99 @@
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+img{
+  display: none;
+}
+img.image-isActive{
+  display: block;
+  width: 550px;
+  height: 350px;
+  margin: auto;
+  // margin-top: 12px;
+  // margin-bottom: 12px;
+  box-shadow: 0 8px 8px -4px; 
+  @media screen and (max-width:440px) {
+    height: 30vh;
+  }
+}
+
+.hero-section{
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1.5fr;
+  background-color: antiquewhite;
+  h1{
+    font-weight: 100;
+    font-size: 48px;
+  }
+  p{
+    letter-spacing: 1.5px;
+    line-height: 40px;
+    font-weight: 400;
+  }
+}
+.text-container{
+  padding-left: 20px;
+
+}
+.image{
+  // border-radius: 20px;
+  width: 450px;
+  // height: 450px;
+  // height: 400px;
+  background-color:black;
+  box-shadow: 0 8px 8px -4px;
+  position: relative;
+}
+.dot-container{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 40%;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  margin-bottom: 12px;
+  
+}
+.dot{
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  cursor: pointer;
+  margin: 0 5px;
+  display: inline-block;
+  transition: opacity 0.6s ease;
+  opacity: .6;
+}
+
+.isActive, .dot:hover{
+  background-color: coral;
+  opacity: 1;
+}
+.controls{
+  display: none;
+}
+.left-arrow{
+  transform: rotate(180deg);
+}
+//animation class
+.fade{
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade{
+  from{
+    opacity: .4;
+  }
+  to{
+    opacity: 1;
+  }
+}

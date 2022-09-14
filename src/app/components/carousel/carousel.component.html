@@ -1,0 +1,28 @@
+<div *ngIf="images && images.length > 0">
+
+  <div class="hero-section">
+    <div class="text-container">
+      <h1>
+        Sineo
+      </h1>
+      <p>
+        is a leading Cultivators,Processor,Importer and Exporter of Natural Essential oils,
+         Aroma chemical, Herbal extracts, Oleo reins,Absolutes and Concretes.
+      </p>
+
+    </div>
+    <div>
+    <div  *ngFor=" let image of images,let i=index">
+        <img [src]="image.imageSRC" [alt]="image.imageALT"
+          [ngClass]="{'image-isActive':selectedIndex==i}"
+          class="fade"
+        >
+    </div>
+  </div>
+    <div *ngIf="indicators" class="dot-container">
+      <span class="dot" *ngFor="let dot of images,let i = index"
+      [ngClass]="{'isActive':selectedIndex==i}"
+      (click)="selectImage(i)"
+      ></span>
+    </div>
+  </div>
