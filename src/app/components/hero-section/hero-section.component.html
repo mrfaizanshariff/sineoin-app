@@ -1,0 +1,63 @@
+<section class="container">
+  <div class="inner-container">
+    <div class="nav-bar">
+      <app-nav-bar></app-nav-bar>
+    </div>
+   
+    <div class="hero">
+      <div class="text">
+        <h3>SINEO is a leading Cultivators,Processor,Importer and Exporter of Natural Essential oils,
+           Aroma chemical, Herbal extracts, Oleo reins,Absolutes and Concretes.</h3>
+
+        <button mat-stroked-button> 
+          <a routerLink="/products" style="text-decoration:none; color:black">
+            &#8594; See Products 
+          </a>
+          </button>   
+      </div>
+      <img src="https://images.unsplash.com/photo-1624454002302-36b824d7bd0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZXNzZW50aWFsJTIwb2lsc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" class="img">
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="about-title">
+      <h1>about us</h1>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="about">
+    <h1>
+      We have exclusive access to first print original sources of supply (such as farmers ,forest contracts). with latest testing facilities for natural essential oils ,aroma chemicals ,we have our own manufacturing facility, thus enable us to offer
+      goods at competitive price while having strict quality control.
+      <br>
+      We also offer high purity botanical extracts, natural essential oils etc.
+      using SFE tech (CO2), we have standardized number of botanical extracts natural essential oils, spice oils and oleo resins.
+    </h1>
+  </div>
+  <mat-divider></mat-divider>
+
+  <div class="top-products">
+    <div class="text">
+      our products
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+
+  <div class="product-section">
+
+    <div class="product-container">
+      <mat-card class="product-card" *ngFor="let card of productCard">
+        <mat-card-header>
+          <mat-card-title>{{card.title}}</mat-card-title>
+        </mat-card-header>
+        <img class="product-img" [src]="card.imgSrc" [alt]="card.description">
+        <mat-card-content>
+          <h3>{{card.description}}</h3>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <button mat-stroked-button> 
+      <a routerLink="/products" style="text-decoration:none; color:black">
+        &#8594; See Products 
+      </a>
+      </button>   
+  </div>
+</section>
