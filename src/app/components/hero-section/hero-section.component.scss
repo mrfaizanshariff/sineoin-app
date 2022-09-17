@@ -14,6 +14,9 @@ app-nav-bar{
   height: 88vh;
   // max-height: 90rem;
   // min-height: 60rem;
+  @media screen and (max-width:440px) {
+  height: 60vh;
+  }
 }
 .header-section{
   display: flex;
@@ -37,10 +40,21 @@ app-nav-bar{
     border-radius: 12px !important;
     margin-left: 12px;
   }
+
+  @media screen and (max-width:440px) {
+    justify-content: center;
+    gap: 30px;
+    h3{
+      font-size: 20px;
+    }
+    }
 }
 
 .img{
  width: 50vw;
+ @media screen and (max-width:440px) {
+  display: none;
+  }
 }
 
 .about-title{
@@ -65,6 +79,13 @@ app-nav-bar{
     font-family: 'Poppins', sans-serif;
     line-height: 45px;
   }
+  @media screen and (max-width:440px) {
+    padding: 10px 20px;
+    h1{
+      font-size: 14px;
+      line-height: 35px;
+    }
+    }
 }
 
 .top-products{
@@ -93,7 +114,10 @@ app-nav-bar{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 30px;
     gap: 30px;
-  
+    @media screen and (max-width:440px) {
+      grid-template-columns: 1fr;
+      // grid-template-rows: 1fr 1fr ;
+      }
     .product-card{
       max-width: 250px;
       border-radius: 12px;
@@ -108,6 +132,7 @@ app-nav-bar{
         font-family: 'poppins',sans-serif;
 
       }
+
     }
 
     .product-card:hover{
@@ -138,4 +163,18 @@ app-nav-bar{
   app-form{
     width: 65%;
   }
+
+  @media screen and (max-width:440px) {
+    flex-direction: column;
+    justify-content: center;
+    h1{
+      font-size: 24px;
+      // margin: auto;
+    }
+    app-form{
+      width: 85%;
+      align-items: center;
+      margin:auto;
+    }
+    }
 }

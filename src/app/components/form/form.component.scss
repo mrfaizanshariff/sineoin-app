@@ -20,6 +20,11 @@
     border: .5px solid #aaa;
     width: 40%;
     transition: box-shadow .5s;
+
+    @media screen and (max-width:440px) {
+      width: 200px;
+    font-weight: 400;
+    }
   }
   .submit-button:hover{
     cursor: pointer;
