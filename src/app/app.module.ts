@@ -9,6 +9,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { AppMaterialModule } from './app.material.module';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { ProductsComponent } from './components/products/products.component';
+import { FormComponent } from './components/form/form.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ProductsComponent } from './components/products/products.component';
     CarouselComponent,
     NavBarComponent,
     HeroSectionComponent,
-    ProductsComponent
+    ProductsComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

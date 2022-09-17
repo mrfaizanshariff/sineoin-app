@@ -97,7 +97,8 @@ app-nav-bar{
     .product-card{
       max-width: 250px;
       border-radius: 12px;
-      background-color: aliceblue;
+      // background-color: #fcf9ee;
+      transition: box-shadow background-color scale .5s;
       mat-card-title{
         font-family: 'poppins',sans-serif;
         font-size: 16px;
@@ -108,10 +109,33 @@ app-nav-bar{
 
       }
     }
+
+    .product-card:hover{
+      cursor: pointer;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    background-color: #fcf9ee;
+    // scale: 1.2;
+    }
   }
   .product-img{
     width: 250px;
     height: 250px;
     border-radius:12px;
+  }
+}
+
+.form-section{
+  display: flex;
+  padding-bottom: 30px;
+  padding-top: 50px;
+  h1{
+    font-size: 34px;
+    font-family: 'poppins',sans-serif;
+    letter-spacing: -.4px;
+    margin: 10px 0 10px 10px;
+  }
+
+  app-form{
+    width: 65%;
   }
 }
