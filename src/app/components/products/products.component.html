@@ -1,1 +1,11 @@
-<p>products works!</p>
+<div class="container">
+  <button mat-raised-button routerLink="/home" class="back-btn">Back To Home</button>
+  <mat-tab-group>
+    <mat-tab label="Aromatic Oils">
+      <app-product-card [productCard]="aromaticOils"></app-product-card>
+    </mat-tab>
+    <mat-tab label="Essential Oils">
+      <app-product-card [productCard]="essentialOils"></app-product-card>
+    </mat-tab>
+  </mat-tab-group>
+</div>

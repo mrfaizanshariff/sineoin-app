@@ -10,6 +10,9 @@ import { AppMaterialModule } from './app.material.module';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { ProductsComponent } from './components/products/products.component';
 import { FormComponent } from './components/form/form.component';
+import { ProductCardComponent } from './components/products/product-card/product-card.component';
+import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({
@@ -19,13 +22,16 @@ import { FormComponent } from './components/form/form.component';
     NavBarComponent,
     HeroSectionComponent,
     ProductsComponent,
-    FormComponent
+    FormComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AppMaterialModule,
     BrowserAnimationsModule,
+    FormsModule,
+    Ng2SearchPipeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

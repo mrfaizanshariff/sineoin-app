@@ -1,0 +1,79 @@
+.product-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 30px;
+  gap: 30px;
+  @media screen and (max-width:440px) {
+    grid-template-columns: 1fr 1fr;
+    // grid-template-rows: 1fr 1fr ;
+    }
+  .product-card{
+    max-width: 150px;
+    height: 250px;
+    border-radius: 0px;
+    // background-color: #fcf9ee;
+    transition: box-shadow background-color .5s;
+
+    ::ng-deep .mat-card-header .mat-card-header-text{
+       margin: 0;
+     }
+    @media screen and (max-width:440px) {
+      max-width: 120px;
+      height: 200px;
+      padding: 10px;
+      }
+    mat-card-title{
+      font-family: 'poppins',sans-serif;
+      font-size: 14px;
+      @media screen and (max-width:440px) {
+        font-size: 12px;
+        }
+    }
+
+    h3{
+      font-family: 'poppins',sans-serif;
+      @media screen and (max-width:440px) {
+        font-size: 10px;
+        }
+    }
+
+  }
+
+  .product-card:hover{
+    cursor: pointer;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  background-color: #fcf9ee;
+  @media screen and (max-width:440px) {
+    background-color: white;
+    }
+  }
+}
+.product-img{
+  width: 150px;
+  height: 150px;
+  border-radius:12px;
+  @media screen and (max-width:440px) {
+    max-width: 100px;
+    height: 100px;
+    }
+}
+
+.search-hero {
+  max-width: 500px;
+  // padding-bottom: 50px;
+  margin:auto;
+  margin-top: 16px;
+}
+
+.form-control {
+  box-shadow: 0 10px 40px 0 #aaa;
+  width: 100%;
+  padding: 10px 100px 10px 10px;
+  font-size: 14px;
+  font-family: sans-serif;
+  border: .5px solid #aaa;
+}
+.form-control::placeholder  {
+  font-family: sans-serif;
+}
+

@@ -82,7 +82,7 @@ app-nav-bar{
   @media screen and (max-width:440px) {
     padding: 10px 20px;
     h1{
-      font-size: 14px;
+      font-size: 18px;
       line-height: 35px;
     }
     }
@@ -115,22 +115,35 @@ app-nav-bar{
     padding: 30px;
     gap: 30px;
     @media screen and (max-width:440px) {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
       // grid-template-rows: 1fr 1fr ;
       }
     .product-card{
       max-width: 250px;
-      border-radius: 12px;
+      border-radius: 0px;
       // background-color: #fcf9ee;
-      transition: box-shadow background-color scale .5s;
+      transition: box-shadow background-color .5s;
+      ::ng-deep .mat-card-header .mat-card-header-text{
+        margin: 0;
+      }
+      @media screen and (max-width:440px) {
+        max-width: 120px;
+        height: 200px;
+        padding: 10px;
+        }
       mat-card-title{
         font-family: 'poppins',sans-serif;
         font-size: 16px;
+        @media screen and (max-width:440px) {
+          font-size: 12px;
+          }
       }
 
       h3{
         font-family: 'poppins',sans-serif;
-
+        @media screen and (max-width:440px) {
+          font-size: 10px;
+          }
       }
 
     }
@@ -139,13 +152,19 @@ app-nav-bar{
       cursor: pointer;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     background-color: #fcf9ee;
-    // scale: 1.2;
+    @media screen and (max-width:440px) {
+      background-color: white;
+      }
     }
   }
   .product-img{
     width: 250px;
     height: 250px;
     border-radius:12px;
+    @media screen and (max-width:440px) {
+      max-width: 100px;
+      height: 100px;
+      }
   }
 }
 
