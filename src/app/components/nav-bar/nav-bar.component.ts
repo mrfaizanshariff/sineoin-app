@@ -11,5 +11,10 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  scrollToContact(){
+    document.getElementById("contact")?.scrollIntoView({
+      behavior:'smooth',
+    });
+  }
 
 }

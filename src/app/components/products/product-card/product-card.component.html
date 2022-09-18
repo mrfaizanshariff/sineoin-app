@@ -2,7 +2,7 @@
   <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder=" Search for products with name or cas number">
 </div>
 <div class="product-container">
-  <mat-card  class="product-card" *ngFor="let card of productCard | filter:searchText">
+  <mat-card  class="product-card" *ngFor="let card of productCard | filter:searchText"  (click)="openProduct(card)">
     <mat-card-header>
       <mat-card-title>{{card.title}}</mat-card-title>
     </mat-card-header>

@@ -191,9 +191,36 @@ app-nav-bar{
       // margin: auto;
     }
     app-form{
-      width: 85%;
+      width: 90%;
       align-items: center;
       margin:auto;
     }
     }
+}
+.left-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  .svg-container{
+    border-radius: 14px;
+    padding-top: 10px;
+    width: 80%;
+    text-align: center;
+    background-color: #25D366;
+    @media screen and (max-width:440px) {
+      width: 82%;
+      margin-right: 25px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .svg-container:hover{
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  }
+}
+.svg{
+    width: 60px;
+    height: 60px;
 }
