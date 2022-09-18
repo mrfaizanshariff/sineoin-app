@@ -1,14 +1,20 @@
 <div class="search-hero">
   <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder=" Search for products with name or cas number">
 </div>
-<div class="product-container">
+<div *ngIf="aromaChem" class="product-container">
   <mat-card  class="product-card" *ngFor="let card of productCard | filter:searchText"  (click)="openProduct(card)">
     <mat-card-header>
       <mat-card-title>{{card.title}}</mat-card-title>
     </mat-card-header>
-    <img class="product-img" [src]="card.imgSrc" [alt]="card.description">
+    <img  class="product-img" [src]="card.imgSrc" [alt]="card.description">
     <mat-card-content>
       <h3>{{card.description}}</h3>
     </mat-card-content>
   </mat-card>
+</div>
+<div *ngIf="!aromaChem" class="essential-product-container">
+      <mat-card *ngFor="let card of productCard | filter:searchText"  (click)="openProduct(card)">
+        <mat-card-title>{{card.title}}</mat-card-title>
+        <mat-card-subtitle>{{card.description}}</mat-card-subtitle>
+      </mat-card>
 </div>

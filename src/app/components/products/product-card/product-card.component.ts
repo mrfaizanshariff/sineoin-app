@@ -13,6 +13,7 @@ export interface DialogData {
 export class ProductCardComponent implements OnInit {
 
   @Input() productCard:any
+  @Input() aromaChem:boolean=true
   searchText:any='';
   constructor(public dialog: MatDialog) { }
 

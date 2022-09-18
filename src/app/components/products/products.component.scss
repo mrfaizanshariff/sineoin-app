@@ -14,7 +14,7 @@
 }
 
 ::ng-deep .mat-tab-group.mat-primary .mat-ink-bar{
-  background-color: black;
+  background-color: #25D366;
   height: 3px;
 }
 .back-btn{
@@ -23,6 +23,7 @@
   top: 10px;
   left: 20px;
   z-index: 100;
+  transition: background-color .5s;
   @media screen and (max-width:440px) {
     background-color: transparent;
     position: relative;
@@ -31,6 +32,9 @@
     margin-bottom: 12px;
     z-index: 100;
   }
+}
+.back-btn:hover{
+  background-color: #25D366;
 }
 
 .form-section{

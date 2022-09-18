@@ -39,6 +39,11 @@ app-nav-bar{
   button{
     border-radius: 12px !important;
     margin-left: 12px;
+    transition: background-color .5s;
+  }
+
+  button:hover{
+    background-color: #25D366;
   }
 
   @media screen and (max-width:440px) {
@@ -107,6 +112,11 @@ app-nav-bar{
   button{
     border-radius: 12px;
     font-size: 18px;
+    transition: background-color .5s;
+  }
+
+  button:hover{
+    background-color: #25D366;
   }
 
   .product-container{
