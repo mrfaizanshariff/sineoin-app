@@ -13,7 +13,8 @@ import { FormComponent } from './components/form/form.component';
 import { ProductCardComponent } from './components/products/product-card/product-card.component';
 import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
+import { CommonModule } from '@angular/common';
+import { DialogOverviewExampleDialog } from './components/products/product-card/dialog-component';
 
 @NgModule({
   declarations: [
@@ -23,9 +24,11 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     HeroSectionComponent,
     ProductsComponent,
     FormComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    DialogOverviewExampleDialog,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     AppMaterialModule,
@@ -34,6 +37,6 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     Ng2SearchPipeModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

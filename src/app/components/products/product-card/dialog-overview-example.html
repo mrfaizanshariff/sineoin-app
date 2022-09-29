@@ -1,8 +1,79 @@
-<h1 mat-dialog-title>{{data.title}}</h1>
-<div mat-dialog-content>
-  <p>{{data.description}}</p>
-</div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">Close</button>
- 
+<div class="container">
+  <h1 mat-dialog-title>{{data.info.title}}</h1>
+  <div mat-dialog-content>
+    <p>Chemical Name: {{data?.specs ? data.specs?.chemicalName : 'N/A'}}</p>
+    <p>Applications: {{data?.specs ? data.specs?.applications : 'N/A'}}</p>
+    <p>
+      Description :
+      <span> {{data?.specs ? data.specs?.description.Formula : 'N/A'}}</span>
+      <span> {{data?.specs ? data.specs?.description.MW : 'N/A'}}</span>
+    </p>
+    <div>
+      Specifications:
+      <p *ngIf="data.specs?.specification?.Appearance">
+        Appearance................. {{data?.specs ?
+        data.specs?.specification?.Appearance : 'N/A'}}
+      </p>
+      <p *ngIf="data.specs?.specification?.Odor">
+        Odor....................... {{data?.specs ?
+        data.specs?.specification?.Odor : 'N/A'}}
+      </p>
+      <p *ngIf="data.specs?.specification?.Taste">
+        Taste....................... {{data?.specs ?
+        data.specs?.specification?.Taste : 'N/A'}}
+      </p>
+      <p *ngIf="data.specs?.specification?.Color">
+        Color....................... {{data?.specs ?
+        data.specs?.specification?.Color : 'N/A'}}
+      </p>
+      <p *ngIf="data.specs?.specification?.SpecificGravity">
+        Specific gravity at 20C/4.. {{data?.specs ?
+        data.specs?.specification?.SpecificGravity : 'N/A'}}
+      </p>
+      <p *ngIf="data.specs?.specification?.Density">
+        Density at 20C (g/ml).. {{data?.specs ?
+        data.specs?.specification?.Density : 'N/A'}}
+      </p>
+      <p *ngIf="data.specs?.specification?.RefractiveIndex">
+        Refracrtive Index at 20C... {{data?.specs ?
+        data.specs?.specification?.RefractiveIndex : 'N/A'}}
+      </p>
+      <p *ngIf="data.specs?.specification?.Purity">
+        Purity................ {{data?.specs ? data.specs?.specification?.Purity
+        : 'N/A'}}
+      </p>
+      <p *ngIf="data.specs?.specification?.FlashPoint">
+        Flash Point..................... {{data?.specs ?
+        data.specs?.specification?.FlashPoint : 'N/A'}}
+      </p>
+      <p *ngIf="data.specs?.specification?.BoilingPoint">
+        Boiling Point.............. {{data?.specs ?
+        data.specs?.specification?.BoilingPoint : 'N/A'}}
+      </p>
+      <p *ngIf="data.specs?.specification?.MeltingPoint">
+        Melting Point.............. {{data?.specs ?
+        data.specs?.specification?.MeltingPoint : 'N/A'}}
+      </p>
+      <p *ngIf="data.specs?.specification?.sumOfIsomer">
+        Sum of Isomer............... {{data?.specs ?
+        data.specs?.specification?.sumOfIsomer : 'N/A'}}
+      </p>
+      <p *ngIf="data.specs?.specification?.Solubility">
+        Solubility............... {{data?.specs ?
+        data.specs?.specification?.Solubility : 'N/A'}}
+      </p>
+    </div>
+    <p *ngIf="data.specs?.RecommendedUseLevel">
+      Recommended Use level: {{data?.specs ? data.specs?.RecommendedUseLevel :
+      'N/A'}}
+    </p>
+    <p *ngIf="data.specs?.ShelfLife">Shelf Life : {{data.specs?.ShelfLife}}</p>
+    <p *ngIf="data.specs?.AcidValue">Acid Value : {{data.specs?.AcidValue}}</p>
+    <p *ngIf="data.specs?.StabilityNStorage">
+      Stability and Storage : {{data.specs?.StabilityNStorage}}
+    </p>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Close</button>
+  </div>
 </div>
